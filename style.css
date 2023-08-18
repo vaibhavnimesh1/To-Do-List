@@ -20,7 +20,7 @@
 
   position: absolute;
   top: 150px;
-  width: 35rem;
+  width: 35rem;overflow: hidden;
 
   background: rgb(255, 254, 254);
  
@@ -51,6 +51,10 @@
   background: transparent;
   border: none;
   margin-left: 0.625rem;
+  outline: white;
+  font-size: 1.3rem;
+  height: 40px;
+ 
 }
 .row button {
   
@@ -68,6 +72,12 @@ ul li{
     list-style: none;
 margin: 1rem 0 0 2.5rem;
 position: relative;
+font-size: 26px;
+display: flex;
+justify-items: center;
+align-items: center;
+
+
 }
 
 ul li::before{
@@ -79,13 +89,31 @@ ul li::before{
     background-image: url(data:image/png;base64,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);
     background-size:cover ;
     background-position: center;
-    left: -47px;
-    top: -4px;
+    left: -49px;
+    top: 3px;
     margin-left: 10px;
     
+   
 }
 ul li.checked::before{
     background-image: url(https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/523/posts/32694/final_image/tutorial-preview-large.png);
- text-decoration: line-through;
     
+  }
+  .checked{
+  text-decoration: line-through;
+
+}
+
+ul li img{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+
+  align-items: center;
+
+}
+
+ul li img:hover{
+  background: #191818;
 }
